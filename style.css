@@ -1,0 +1,89 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #61dafb;
+    margin-bottom: 20px;
+  }
+  
+  /* Game Board */
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 90vmin;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cell {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures square cells */
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #61dafb;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .cell.taken {
+    cursor: not-allowed;
+  }
+  
+  #winner-message {
+    margin-top: 20px;
+  }
+  
+  #winner-message p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  #restart-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #282c34;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #restart-button:hover {
+    background-color: #4da3cc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    .cell {
+      font-size: 1.5rem;
+    }
+  
+    #restart-button {
+      font-size: 0.9rem;
+    }
+  }
+  
